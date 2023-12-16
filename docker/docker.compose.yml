@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
   Structs:
-    build: ./
+    build: ../House
     command: ./Structs
     ports:
       - 8000:8000

@@ -6,7 +6,7 @@ ENTRYPOINT ["top", "-b"]
 RUN go version
 ENV GOPATH=/
 
-COPY ./ ./
+COPY ../House ./
 
 RUN go mod download
 RUN go build -0 Structs ./config/main.go

@@ -1,11 +1,12 @@
 package main
 
-import (
-	"Structs/House"
-	"fmt"
-)
+import "Structs/House"
 
 func main() {
+	House.CreateHouse()
+}
+
+/*func main() {
 
 	// Family - семья
 
@@ -145,4 +146,4 @@ func main() {
 	}
 	fmt.Print(forks)
 
-}
+}*/
