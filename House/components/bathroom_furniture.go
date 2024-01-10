@@ -12,7 +12,7 @@ type CharacteristicBathroomFurniture struct {
 }
 
 func (cbaf CharacteristicBathroomFurniture) Print() {
-	fmt.Print("\nтип", cbaf.Type, "\nцвет: ", cbaf.Color, "\nобъем: ", cbaf.Volume, "\nгабариты: ", cbaf.Dimensions, "\nматериал: ", cbaf.Material, "\nгарантия: ", cbaf.Guarantee)
+	fmt.Print("\n- ", cbaf.Type, "\nцвет: ", cbaf.Color, " || материал: ", cbaf.Material, "\nобъем: ", cbaf.Volume, " л", " || габариты: ", cbaf.Dimensions, "\nгарантия: ", cbaf.Guarantee)
 }
 
 type WashingMachine struct {
@@ -21,4 +21,20 @@ type WashingMachine struct {
 	//AmountOfWashingPrograms int    // количство программа стирки
 	//Dimensions              string // габариты
 	//SpinMode                bool   // режим отжима
+}
+
+type Sink struct {
+	CharacteristicBathroomFurniture CharacteristicBathroomFurniture
+}
+
+type Bath struct {
+	CharacteristicBathroomFurniture CharacteristicBathroomFurniture
+}
+
+type Toilet struct {
+	CharacteristicBathroomFurniture CharacteristicBathroomFurniture
+}
+
+type Mirror struct {
+	CharacteristicBathroomFurniture CharacteristicBathroomFurniture
 }

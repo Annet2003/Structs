@@ -15,6 +15,7 @@ type Family struct {
 func CreateFamily() Family {
 
 	father := components.Father{CharacteristicFamilyData: components.CharacteristicFamilyData{
+		Type:     "Папа",
 		Name:     "Сергей",
 		Age:      38,
 		Height:   1.88,
@@ -23,6 +24,7 @@ func CreateFamily() Family {
 	}}
 
 	mother := components.Mother{CharacteristicFamilyData: components.CharacteristicFamilyData{
+		Type:     "Мама",
 		Name:     "Ольга",
 		Age:      35,
 		Height:   1.75,
@@ -31,6 +33,7 @@ func CreateFamily() Family {
 	}}
 
 	daughter := components.Daughter{CharacteristicFamilyData: components.CharacteristicFamilyData{
+		Type:     "Дочь",
 		Name:     "Настя",
 		Age:      12,
 		Height:   1.55,
@@ -39,6 +42,7 @@ func CreateFamily() Family {
 	}}
 
 	son := components.Son{CharacteristicFamilyData: components.CharacteristicFamilyData{
+		Type:     "Сын",
 		Name:     "Антон",
 		Age:      14,
 		Height:   1.60,
@@ -46,7 +50,7 @@ func CreateFamily() Family {
 		Position: "ученик",
 	}}
 
-	fmt.Print("СЕМЬЯ")
+	fmt.Print("\nСЕМЬЯ: папа, мама, дочь, сын")
 
 	father.CharacteristicFamilyData.Print()
 	mother.CharacteristicFamilyData.Print()

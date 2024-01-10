@@ -10,6 +10,7 @@ type Apartment struct {
 	Bathroom  apartment.Bathroom
 	Childroom apartment.Childroom
 	Family    apartment.Family
+	Rooms     apartment.Rooms
 }
 
 type House struct {
@@ -17,13 +18,15 @@ type House struct {
 }
 
 func CreateHouse() House {
-	rooms := Apartment{
+
+	apart := Apartment{
 		Family:    apartment.CreateFamily(),
+		Rooms:     apartment.CreateSquareRooms(),
 		Kitchen:   apartment.CreateKitchen(),
 		Bedroom:   apartment.CreateBedroom(),
 		Bathroom:  apartment.CreateBathroom(),
 		Childroom: apartment.CreateChildroom()}
 
-	house := House{Apartment: rooms}
+	house := House{Apartment: apart}
 	return house
 }

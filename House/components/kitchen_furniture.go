@@ -5,16 +5,15 @@ import "fmt"
 // мебель кухни
 
 type CharacteristicKitchenFurniture struct {
-	Type        string
-	Amount      int
-	Material    string
-	Appointment string // назначение
-	//NumberOfSeats      int
-	MoistureResistance bool // влагоустойчивость
+	Type               string
+	Amount             int
+	Material           string
+	Appointment        string // назначение
+	MoistureResistance bool   // влагоустойчивость
 }
 
 func (ckf CharacteristicKitchenFurniture) Print() {
-	fmt.Print("\nтип: ", ckf.Type, "\nколичесвто: ", ckf.Amount, "\nматериал: ", ckf.Material, "\nназначение: ", ckf.Appointment, "\nвлагоустойчивость: ", ckf.MoistureResistance)
+	fmt.Print("\n- ", ckf.Type, "\nколичество: ", ckf.Amount, " || материал: ", ckf.Material, " \nназначение: ", ckf.Appointment, " || влагоустойчивость: ", ckf.MoistureResistance)
 }
 
 type Table struct {
@@ -23,9 +22,22 @@ type Table struct {
 
 type Chairs struct {
 	CharacteristicKitchenFurniture CharacteristicKitchenFurniture
-	//TypeConstruction: "обеденные - трансформеры, письменные - стул-кресло",
+	//TypeConstruction               string
+	//: "обеденные - трансформеры, письменные - стул-кресло",
 }
 
+//func (c Chairs) Print() {
+//	fmt.Print("Тип сборки", c.TypeConstruction)
+//}
+
 type Refrigerator struct {
+	CharacteristicKitchenFurniture CharacteristicKitchenFurniture
+}
+
+type Cooker struct { // плита, печь
+	CharacteristicKitchenFurniture CharacteristicKitchenFurniture
+}
+
+type Garniture struct {
 	CharacteristicKitchenFurniture CharacteristicKitchenFurniture
 }

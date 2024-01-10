@@ -10,7 +10,7 @@ type CharacteristicChildroomFurniture struct {
 }
 
 func (ccf CharacteristicChildroomFurniture) Print() {
-	fmt.Print("\nтип: ", ccf.Type, "\nматериал: ", ccf.Material, "\nвысота: ", ccf.Height, "\nдлина: ", ccf.Length)
+	fmt.Print("\n- ", ccf.Type, "\nматериал: ", ccf.Material, " || высота: ", ccf.Height, " м || длина: ", ccf.Length, " м")
 }
 
 type Sofa struct {
@@ -27,5 +27,13 @@ type Playhouse struct {
 }
 
 type Carpet struct {
+	CharacteristicChildroomFurniture CharacteristicChildroomFurniture
+}
+
+type Desk struct {
+	CharacteristicChildroomFurniture CharacteristicChildroomFurniture
+}
+
+type Deskchairs struct {
 	CharacteristicChildroomFurniture CharacteristicChildroomFurniture
 }

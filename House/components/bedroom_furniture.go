@@ -12,7 +12,7 @@ type CharacteristicBedroomFurniture struct {
 }
 
 func (cbf CharacteristicBedroomFurniture) Print() {
-	fmt.Print("\nтип: ", cbf.Type, "\nколичесвто: ", cbf.Amount, "\nматериал: ", cbf.Material, "\nвысота: ", cbf.Height, "\nдлина: ", cbf.Length, "\nгарантия: ", cbf.Guarantee)
+	fmt.Print("\n- ", cbf.Type, "\nколичесвто: ", cbf.Amount, " || материал: ", cbf.Material, "\nвысота: ", cbf.Height, " м", " || длина: ", cbf.Length, " м", "\nгарантия: ", cbf.Guarantee)
 }
 
 type Bed struct {
@@ -26,4 +26,8 @@ type Closet struct {
 	//Type          string
 	//DoorOpener    string
 	//AmountOfDoors int
+}
+
+type LadiesTable struct {
+	CharacteristicBedroomFurniture CharacteristicBedroomFurniture
 }

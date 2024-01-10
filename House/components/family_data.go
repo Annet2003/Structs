@@ -3,6 +3,7 @@ package components
 import "fmt"
 
 type CharacteristicFamilyData struct {
+	Type     string
 	Name     string
 	Age      int
 	Height   float32
@@ -11,7 +12,7 @@ type CharacteristicFamilyData struct {
 }
 
 func (cfd CharacteristicFamilyData) Print() {
-	fmt.Print("\nимя: ", cfd.Name, "\nвозраст: ", cfd.Age, "\nрост: ", cfd.Height, "\nвес: ", cfd.Weight, "\nдолжность: ", cfd.Position)
+	fmt.Print("\n- ", cfd.Type, " - ", cfd.Name, " -", "\nвозраст: ", cfd.Age, " лет; рост: ", cfd.Height, " м; вес: ", cfd.Weight, " кг; должность: ", cfd.Position)
 }
 
 type Mother struct {

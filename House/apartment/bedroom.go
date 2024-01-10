@@ -6,8 +6,9 @@ import (
 )
 
 type Bedroom struct {
-	Bed    components.Bed
-	Closet components.Closet
+	Bed         components.Bed
+	Closet      components.Closet
+	LadiesTable components.LadiesTable
 }
 
 func CreateBedroom() Bedroom {
@@ -33,11 +34,24 @@ func CreateBedroom() Bedroom {
 		//AmountOfDoors: 2,
 	}}
 
-	fmt.Print("СПАЛЬНЯ")
+	ladiesTable := components.LadiesTable{CharacteristicBedroomFurniture: components.CharacteristicBedroomFurniture{
+		Type:      "Дамский столик",
+		Amount:    1,
+		Material:  "ДСП + зеркало",
+		Height:    2,
+		Length:    2,
+		Guarantee: true, // гарантия
+		//Type:          "строенный",
+		//DoorOpener:    "раздвижные",
+		//AmountOfDoors: 2,
+	}}
+
+	fmt.Print("\n\nСПАЛЬНЯ")
 	bed.CharacteristicBedroomFurniture.Print()
 	closet.CharacteristicBedroomFurniture.Print()
+	ladiesTable.CharacteristicBedroomFurniture.Print()
 
-	bedroom := Bedroom{Bed: bed, Closet: closet}
+	bedroom := Bedroom{Bed: bed, Closet: closet, LadiesTable: ladiesTable}
 
 	return bedroom
 

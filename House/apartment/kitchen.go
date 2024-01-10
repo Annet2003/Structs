@@ -9,15 +9,16 @@ type Kitchen struct {
 	Table        components.Table
 	Chairs       components.Chairs
 	Refrigerator components.Refrigerator
+	Cooker       components.Cooker
+	Garniture    components.Garniture
 }
 
 func CreateKitchen() Kitchen {
 	table := components.Table{CharacteristicKitchenFurniture: components.CharacteristicKitchenFurniture{
-		Type:        "Стол",
-		Amount:      4,
-		Material:    "дерево + стекло",
-		Appointment: "один обеденный, два письменных, один жернальный",
-		//NumberOfSeats:      4,
+		Type:               "Столы",
+		Amount:             2,
+		Material:           "дерево + стекло",
+		Appointment:        "один обеденный, один журнальный",
 		MoistureResistance: true,
 	}}
 
@@ -25,9 +26,9 @@ func CreateKitchen() Kitchen {
 		Type:               "Стулья",
 		Amount:             15,
 		Material:           "дерево",
-		Appointment:        "десять обеденных и пять для пиьменного стола ",
+		Appointment:        "10 обеденных и 5 для пиьменного стола ",
 		MoistureResistance: true,
-		//TypeConstruction: "обеденные - трансформеры, письменные - стул-кресло",
+		//TypeConstruction:   "обеденные - трансформеры",
 	}}
 
 	refrigerator := components.Refrigerator{CharacteristicKitchenFurniture: components.CharacteristicKitchenFurniture{
@@ -44,11 +45,31 @@ func CreateKitchen() Kitchen {
 
 	}}
 
-	fmt.Print("КУХНЯ")
+	cooker := components.Cooker{CharacteristicKitchenFurniture: components.CharacteristicKitchenFurniture{
+		// плита, печь
+		Type:               "Плита",
+		Amount:             1,
+		Material:           "стеклокерамика",
+		Appointment:        "варочная поверхность + духовая печь",
+		MoistureResistance: true,
+	}}
+
+	garniture := components.Garniture{CharacteristicKitchenFurniture: components.CharacteristicKitchenFurniture{
+		Type:               "Гарнитура",
+		Amount:             1,
+		Material:           "ДСП",
+		Appointment:        "столешница с рабочей зоной, шкафчики, сушилка для посуды",
+		MoistureResistance: true,
+	}}
+
+	fmt.Print("\n\nКУХНЯ")
+
 	table.CharacteristicKitchenFurniture.Print()
 	chairs.CharacteristicKitchenFurniture.Print()
 	refrigerator.CharacteristicKitchenFurniture.Print()
+	cooker.CharacteristicKitchenFurniture.Print()
+	garniture.CharacteristicKitchenFurniture.Print()
 
-	kitchen := Kitchen{Table: table, Chairs: chairs, Refrigerator: refrigerator}
+	kitchen := Kitchen{Table: table, Chairs: chairs, Refrigerator: refrigerator, Cooker: cooker, Garniture: garniture}
 	return kitchen
 }

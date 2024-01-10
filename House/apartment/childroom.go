@@ -6,9 +6,11 @@ import (
 )
 
 type Childroom struct {
-	Sofa      components.Sofa
-	Playhouse components.Playhouse
-	Carpet    components.Carpet
+	Sofa       components.Sofa
+	Playhouse  components.Playhouse
+	Carpet     components.Carpet
+	Desk       components.Desk
+	Deskchairs components.Deskchairs
 }
 
 func CreateChildroom() Childroom {
@@ -33,12 +35,29 @@ func CreateChildroom() Childroom {
 		Length:   2,
 	}}
 
-	fmt.Print("\nДЕТСКАЯ КОМНАТА")
+	desk := components.Desk{CharacteristicChildroomFurniture: components.CharacteristicChildroomFurniture{
+		Type:     "Письменный стол",
+		Material: "дерево",
+		Height:   1,
+		Length:   2,
+	}}
+
+	deskchairs := components.Deskchairs{CharacteristicChildroomFurniture: components.CharacteristicChildroomFurniture{
+		Type:     "Стулья",
+		Material: "дерево",
+		Height:   1,
+		Length:   1,
+	}}
+
+	fmt.Print("\n\nДЕТСКАЯ КОМНАТА")
+
 	sofa.CharacteristicChildroomFurniture.Print()
 	playhouse.CharacteristicChildroomFurniture.Print()
 	carpet.CharacteristicChildroomFurniture.Print()
+	desk.CharacteristicChildroomFurniture.Print()
+	deskchairs.CharacteristicChildroomFurniture.Print()
 
-	childroom := Childroom{Sofa: sofa, Playhouse: playhouse, Carpet: carpet}
+	childroom := Childroom{Sofa: sofa, Playhouse: playhouse, Carpet: carpet, Desk: desk, Deskchairs: deskchairs}
 
 	return childroom
 
