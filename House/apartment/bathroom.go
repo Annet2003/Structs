@@ -2,6 +2,7 @@ package apartment
 
 import (
 	"Structs/House/components"
+	"fmt"
 )
 
 type Bathroom struct {
@@ -22,6 +23,7 @@ func CreateBathroom() Bathroom {
 		//SpinMode:                true,                 // режим отжима
 	}}
 
+	fmt.Print("ВАННАЯ КОМНАТА")
 	washingmachine.CharacteristicBathroomFurniture.Print()
 
 	bathroom := Bathroom{WashingMachine: washingmachine}

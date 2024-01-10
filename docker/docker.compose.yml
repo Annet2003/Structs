@@ -22,14 +22,9 @@ services:
       - POSTGRES_PASSWORD=123
     ports:
       - 5436:5432
-    depends_on:
-      - adminer
-    adminer:
-      image: adminer
-      restart:always
-      ports:
-        - 8080:8080
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
           
-          
-          
-          // создать make file

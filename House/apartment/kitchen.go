@@ -2,6 +2,7 @@ package apartment
 
 import (
 	"Structs/House/components"
+	"fmt"
 )
 
 type Kitchen struct {
@@ -14,7 +15,7 @@ func CreateKitchen() Kitchen {
 	table := components.Table{CharacteristicKitchenFurniture: components.CharacteristicKitchenFurniture{
 		Type:        "Стол",
 		Amount:      4,
-		Material:    "Дерево + стекло",
+		Material:    "дерево + стекло",
 		Appointment: "один обеденный, два письменных, один жернальный",
 		//NumberOfSeats:      4,
 		MoistureResistance: true,
@@ -23,7 +24,7 @@ func CreateKitchen() Kitchen {
 	chairs := components.Chairs{CharacteristicKitchenFurniture: components.CharacteristicKitchenFurniture{
 		Type:               "Стулья",
 		Amount:             15,
-		Material:           "Дерево",
+		Material:           "дерево",
 		Appointment:        "десять обеденных и пять для пиьменного стола ",
 		MoistureResistance: true,
 		//TypeConstruction: "обеденные - трансформеры, письменные - стул-кресло",
@@ -43,7 +44,11 @@ func CreateKitchen() Kitchen {
 
 	}}
 
+	fmt.Print("КУХНЯ")
 	table.CharacteristicKitchenFurniture.Print()
+	chairs.CharacteristicKitchenFurniture.Print()
+	refrigerator.CharacteristicKitchenFurniture.Print()
+
 	kitchen := Kitchen{Table: table, Chairs: chairs, Refrigerator: refrigerator}
 	return kitchen
 }
