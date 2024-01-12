@@ -22,9 +22,6 @@ func CreateBathroom() Bathroom {
 		Dimensions: "59.6 * 84.6 * 42.1", // габариты
 		Material:   "нержавеющая сталь",
 		Guarantee:  true, // гарантия
-		//Method:                  "фронтальная",        // способ загрузки
-		//AmountOfWashingPrograms: 11,                   // количство программа стирки
-		//SpinMode:                true,                 // режим отжима
 	}}
 
 	sink := components.Sink{CharacteristicBathroomFurniture: components.CharacteristicBathroomFurniture{

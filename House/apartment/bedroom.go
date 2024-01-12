@@ -20,7 +20,6 @@ func CreateBedroom() Bedroom {
 		Height:    1,
 		Length:    2,
 		Guarantee: true, // гарантия
-		//Mattress: "беспружинный"}
 	}}
 	closet := components.Closet{CharacteristicBedroomFurniture: components.CharacteristicBedroomFurniture{
 		Type:      "Шкаф",
@@ -29,9 +28,6 @@ func CreateBedroom() Bedroom {
 		Height:    2,
 		Length:    1,
 		Guarantee: true, // гарантия
-		//Type:          "строенный",
-		//DoorOpener:    "раздвижные",
-		//AmountOfDoors: 2,
 	}}
 
 	ladiesTable := components.LadiesTable{CharacteristicBedroomFurniture: components.CharacteristicBedroomFurniture{
@@ -41,9 +37,6 @@ func CreateBedroom() Bedroom {
 		Height:    2,
 		Length:    2,
 		Guarantee: true, // гарантия
-		//Type:          "строенный",
-		//DoorOpener:    "раздвижные",
-		//AmountOfDoors: 2,
 	}}
 
 	fmt.Print("\n\nСПАЛЬНЯ")

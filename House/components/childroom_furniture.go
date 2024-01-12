@@ -15,15 +15,10 @@ func (ccf CharacteristicChildroomFurniture) Print() {
 
 type Sofa struct {
 	CharacteristicChildroomFurniture CharacteristicChildroomFurniture
-
-	//Mattress string // пружинный или беспружинный
 }
 
 type Playhouse struct {
 	CharacteristicChildroomFurniture CharacteristicChildroomFurniture
-	//Type          string
-	//DoorOpener    string
-	//AmountOfDoors int
 }
 
 type Carpet struct {

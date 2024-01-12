@@ -28,7 +28,6 @@ func CreateKitchen() Kitchen {
 		Material:           "дерево",
 		Appointment:        "10 обеденных и 5 для пиьменного стола ",
 		MoistureResistance: true,
-		//TypeConstruction:   "обеденные - трансформеры",
 	}}
 
 	refrigerator := components.Refrigerator{CharacteristicKitchenFurniture: components.CharacteristicKitchenFurniture{
@@ -37,12 +36,6 @@ func CreateKitchen() Kitchen {
 		Material:           "листовая сталь",
 		Appointment:        "холодильная + морозильная камера",
 		MoistureResistance: true,
-		//Height:            2,
-		//Width:             1,
-		//Color:             "мраморный",
-		//Volume:            300,
-		//MaxMinTemperature: "-18 +5",
-
 	}}
 
 	cooker := components.Cooker{CharacteristicKitchenFurniture: components.CharacteristicKitchenFurniture{
@@ -71,5 +64,7 @@ func CreateKitchen() Kitchen {
 	garniture.CharacteristicKitchenFurniture.Print()
 
 	kitchen := Kitchen{Table: table, Chairs: chairs, Refrigerator: refrigerator, Cooker: cooker, Garniture: garniture}
+
 	return kitchen
+
 }

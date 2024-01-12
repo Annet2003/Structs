@@ -2,7 +2,7 @@ test:
 	@echo 'Мы сделали Makefile'
 
 up:
-	sudo docker-compose up —build awesome-project
+	sudo docker-compose up --build Structs
 
 stop:
 	sudo docker-compose stop

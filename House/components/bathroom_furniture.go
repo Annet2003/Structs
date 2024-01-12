@@ -17,10 +17,6 @@ func (cbaf CharacteristicBathroomFurniture) Print() {
 
 type WashingMachine struct {
 	CharacteristicBathroomFurniture CharacteristicBathroomFurniture
-	//Method                  string // способ загрузки
-	//AmountOfWashingPrograms int    // количство программа стирки
-	//Dimensions              string // габариты
-	//SpinMode                bool   // режим отжима
 }
 
 type Sink struct {

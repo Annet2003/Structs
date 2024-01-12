@@ -17,15 +17,10 @@ func (cbf CharacteristicBedroomFurniture) Print() {
 
 type Bed struct {
 	CharacteristicBedroomFurniture CharacteristicBedroomFurniture
-
-	//Mattress string // пружинный или беспружинный
 }
 
 type Closet struct {
 	CharacteristicBedroomFurniture CharacteristicBedroomFurniture
-	//Type          string
-	//DoorOpener    string
-	//AmountOfDoors int
 }
 
 type LadiesTable struct {

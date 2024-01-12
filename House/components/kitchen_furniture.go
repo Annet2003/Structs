@@ -22,13 +22,7 @@ type Table struct {
 
 type Chairs struct {
 	CharacteristicKitchenFurniture CharacteristicKitchenFurniture
-	//TypeConstruction               string
-	//: "обеденные - трансформеры, письменные - стул-кресло",
 }
-
-//func (c Chairs) Print() {
-//	fmt.Print("Тип сборки", c.TypeConstruction)
-//}
 
 type Refrigerator struct {
 	CharacteristicKitchenFurniture CharacteristicKitchenFurniture

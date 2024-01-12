@@ -44,7 +44,7 @@ func CreateSquareRooms() Rooms {
 		Square: 18,
 	}}
 
-	fmt.Print("\n\nПостроился дом для семьи!")
+	fmt.Print("\n\nПостроился дом для семьи!\n")
 	fmt.Print("\nРазмеры и площади комнат: ")
 
 	skitchen.RSquare.Print()
@@ -53,6 +53,7 @@ func CreateSquareRooms() Rooms {
 	schildroom.RSquare.Print()
 
 	rooms := Rooms{SKitchen: skitchen, SBathroom: sbathroom, SBedroom: sbedroom, SChildroom: schildroom}
+	fmt.Print("\n\n Заполняем дом мебелью ...")
 	return rooms
 
 }
